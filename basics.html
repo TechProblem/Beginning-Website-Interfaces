@@ -14,6 +14,15 @@
 
         <!-- set up a description of the page content in the title tag; it should be short, sweet, and descriptive -->
         <title>HTML Basics</title>
+
+        <!-- link to an external CSS file -->
+        <link rel="stylesheet" href="main.css">
+
+        <!-- Embedded CSS styles go here - embedded CSS styles apply only to the current page -->
+        <style>
+            
+        </style>
+
     </head>
 
     <!-- The body section is where the content of the page goes -->
@@ -37,6 +46,48 @@
             <li>HTML 3.2 - developed in 1997</li>
             <li>HTML 4.01 - developed in 1999</li>
             <li>HTML 5 - developed in 2014 (current version)</li>
+        </ul>
+
+        <!-- we will add an image here -->
+        <!-- TODO: move the width to css -->
+        <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5 Logo" width="200" height="200">
+
+        <!-- heading for CSS - h2 - heading level 2 -->
+        <h2>Cascading Style Sheets (CSS) </h2>
+
+        <p>CSS is a language that is used to make HTML look better. CSS can control layout, colors, font - basically any visual element on the page can be changed from default with CSS.</p>
+
+        <h3>History of CSS</h3>
+
+        <ul>
+            <li>CSS1 released in 1996</li>
+            <li>CSS2 released in 1998</li>
+            <li>CSS3 released in 2011 - this is the current version of CSS</li>
+        </ul>
+
+        <h3 id="h3BasicStructure">Basic Structure</h3>
+
+        <pre>
+            selector {
+                property: value;
+            }
+        </pre>
+
+        <ul>
+            <li>CSS selectors can be an HTML element, id of an HTML element, custom class</li>
+            <li>CSS helps with the separation of content and looks</li>
+            <li>CSS makes our sites easier to maintain</li>
+            <li>Accessibility issues can be more easily managed</li>
+        </ul>
+
+        <h3>3 ways to include CSS on our webpages</h3>
+
+
+        <!-- Inline style - use the style attribute, set up the CSS - be very careful - inline styles create maintenance issues -->
+        <ul style="color: darkblue;">
+            <li>External - a seperate CSS file - this is the best practice</li>
+            <li>Embedded - the CSS is on 1 page - use with caution</li>
+            <li>Inline - the CSS is on an individual HTML element - avoid if possible</li>
         </ul>
 
         <!-- the closing bogy tag should be the next to last line of your HTML page -->
