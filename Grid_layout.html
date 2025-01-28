@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <!-- embedded styles; move to external css file when done -->
+     <style>
+        /* These styles in the body will apply to the whole page */
+        body{
+            /* bachground color will affect the whole page */
+            background-color: rgb(255, 249, 168);
+            /* change the text color - make sure to keep a good contrast */
+            color: rgb(9, 0, 92);
+
+            /* set the margin and padding to 0 to start with */
+            margin: 0;
+            padding: 0;
+
+            /* change the font / typeface */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            /* we will use the grid layout for this page */
+            display: grid;
+
+            /* automatically set the height for header and footer; 1fr is flexable middle row */
+            grid-template-rows: auto 1fr auto;
+        }
+     </style>
+</head>
+<body>
+    <!-- the header section usually would appear at the top of the page -->
+    <header>
+        <!-- the nav section is a good place for the website menu to go -->
+        <nav>
+            <!-- this is where our menu would go -->
+        </nav>
+
+        <!-- h1 is the heading 1, there should be only one on a page -->
+        <h1>CSS Grid Layout</h1>
+    </header>
+
+    <!-- section for the core content of the page -->
+    <main>
+
+        <!-- first article -->
+        <article>
+            <!-- article sections should have an h2 -->
+            <h2>Article 1 Title</h2>
+            <p>This is some interesting text.</p>
+            <p>This is more interesting text.</p>
+            <p>This is amazing interesting text.</p>
+        </article>
+
+        <!-- second article -->
+        <article>
+            <!-- article sections should have an h2 -->
+            <h2>Article 2 Title</h2>
+            <p>This is some interesting text.</p>
+            <p>This is more interesting text.</p>
+            <p>This is amazing interesting text.</p>
+        </article>
+    </main>
+
+    <!-- set up an aside that will add some interesting information about our article -->
+     <aside>
+        <!-- title for our aside -->
+         <h3>Sidebar Title</h3>
+         <p>Here is some more interesting information about our article.</p>
+     </aside>
+
+     <footer>
+        <p>here is some legal information.</p>
+     </footer>
+</body>
+</html>
