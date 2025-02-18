@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Example</title>
+    <!-- embedded styles -->
+     <style>
+        /* the img selector will affect all img tags on the page
+        img {
+            width: 50%;
+        }
+         this class will only affect elements that include this class name */
+
+        .imagemountains{
+            width: 50%;
+        }
+     </style>
+</head>
+<body>
+    <header>
+        <h1>Multimedia Example</h1>
+    </header>
+    <main>
+        <h2>Images</h2>
+        <!-- image tag - need to set the src = name of the file including extension; alt = description of the image -->
+         <!-- when linking files you can use absolute paths - start with the / or you can use relative paths - start with ./ 
+          you need to use relative paths on github so your images and files show up -->
+         <img class="imagemountains" src="./Images/download.jpg" alt="mountains">
+
+        <h2>Audio</h2>
+
+        <audio controls>
+            <source src="./Media/wind-blowing-sfx-12809.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio controls>
+            <source src="./Media/wind-blowing-sfx-12809.mp3" type="audio/mpeg">
+            <source src="./Media/.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>Video</h2>
+        
+        <video controls width="240" height="180">
+            <source src="./Media/855265-hd_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video element.
+            </video>
+    </main>
+</body>
+</html>
