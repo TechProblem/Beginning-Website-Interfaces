@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(127, 208, 255);
+    padding: 0;
+    margin: 0;
+}
+
+/* will apply to ALL images */
+img{
+    width: 80%;
+}
+
+header{
+    background: linear-gradient(to right, rgb(255, 69, 69), rgb(255, 255, 255));
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.btn{
+    background-color: white;
+    color:rgb(255, 0, 0);
+    /* 10 px top/bottom; 20px left/right */
+    padding: 10px 20px;
+    /* this makes a text bold */
+    font-weight: bold;
+    /* removes border */
+    border:none;
+    /* make rounded corners */
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn:hover{
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
