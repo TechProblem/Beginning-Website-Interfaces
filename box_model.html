@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Example</title>
+    <style>
+        .outerEdge{
+            border: 1px solid black;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px;
+            /* symetric padding - 20px on each side */
+            padding: 20px;
+            /* specify padding for each side */
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            /* to set padding for all sides, we usually use this shortcut */
+            padding: 20px 30px 40px 50px;
+            /* padding: top right bottom left CLOCKWISE*/
+            /* the other shortcut is setting top and bottom; and left and right at same time */
+            padding: 30px 40px;
+            /* padding: top/bottom left/right */
+            /* set the border width style and color */
+            border: 2px solid green;
+
+            /* margin is outside of the border */
+            margin: 20px;
+
+            /* set margins individually */
+            margin-top: 100px;
+            margin-right: 40px;
+            margin-bottom: 50px;
+            margin-left: 30px;
+            /* the line below is equivalent to the 4 lines above */
+            margin: 100px 40px 50px 30px;
+
+            /* 40px margin top and bottom; 20px margin left & right */
+            margin: 40px 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Box Model Example</h1>
+    </header>
+
+    <main>
+        <!-- this outer box helps see what happens in the margin -->
+        <div class="outerEdge">
+            <!-- the box that we will adjust the spacing of -->
+            <div class="box">
+                Content
+            </div>
+        </div>
+
+        <ul>
+            <li>Content: innermost area where the text and images appear</li>
+            <li>Padding: space between the content and the border</li>
+            <li>Border: the line that goes around the padding and content (green area)</li>
+            <li>Margin: space between the border and the outer edge of the box</li>
+
+        </ul>
+    </main>
+</body>
+</html>
