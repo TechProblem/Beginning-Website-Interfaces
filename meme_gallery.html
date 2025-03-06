@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Gallery</title>
+    <style>
+        /* this will ensure that padding the border are included in element's total width and height, which ensures that our percentages work properly */
+        * {
+            box-sizing:border-box;
+        }
+
+        body{
+            margin: 0;
+            background-color: lightblue;
+        }
+
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .gallery{
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .gallery img{
+            width: 100%
+        }
+
+        /* media queries for responsive design to make our glalery look better on smaller screensizes */
+        @media (max-width: 968px){
+            .gallery{
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 600px){
+            .gallery{
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Developement Meme Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="./memes/img1.jpg" alt="Meme 1">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img2.jpg" alt="Meme 2">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img3.jpg" alt="Meme 3">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img4.webp" alt="Meme 4">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img5.jpg" alt="Meme 5">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img6.jpg" alt="Meme 6">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img7.jpg" alt="Meme 7">
+        </div>
+
+        <div class="gallery">
+            <img src="./memes/img8.jpeg" alt="Meme 8">
+        </div>
+
+    </main>
+</body>
+</html>
