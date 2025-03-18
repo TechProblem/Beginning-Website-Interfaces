@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 table example</title>
+    <!-- TODO: set up styles as embedded styles, but need to move them to external css file once they are done -->
+    <style>
+        body{
+            background-color:aqua;
+            color:rgb(0, 0, 151);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        table{
+            /* collapse multiple borders into single border - this looks better than stacked */
+            border-collapse: collapse;
+            width: 80%;
+            border: 1px solid blue;
+        }
+
+        th{
+            text-align: left;
+            background-color: rgb(0, 0, 151);
+            color: whitesmoke;
+        }
+
+        th, td{
+            padding: 8px;
+        }
+
+        /* set a different background color on alternating rows */
+        tr:nth-child(even){
+            background-color: lightgray;
+        }
+
+        /* change the colors when the mouse hovers over a particular row */
+        tr:hover{
+            background-color: darkblue;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Week 9 table example</h1>
+    </header>
+
+    <main>
+        <!-- begin the table with a table tag -->
+        <table>
+            <!-- caption is for a detailed description of the table; helpful for accessibility -->
+            <caption>Interesting facts and reactions</caption>
+
+            <!-- table head section; column headers -->
+            <thread>
+                <!-- table headers - th - for each column, using the scope="col" to guide the screan readers -->
+                <th scope="col">Num</th>
+                <th scope="col">Fact</th>
+                <th scope="col">Reaction</th>
+            </thread>
+
+            <!-- table body section; where the main content goes -->
+             <tbody>
+                <!-- rows - tr - of data -->
+                <tr>
+                    <!-- optionally include th in data to provide more context to screen reader -->
+                    <th scope="row">1</th>
+                    <!-- table data - td - cells -->
+                    <td>Honey rarely spoils</td>
+                    <td aria-label="Reaction: wow, that's interesting!">Wow!</td>
+                </tr>
+
+                <tr>
+                    <!-- optionally include th in data to provide more context to screen reader -->
+                    <th scope="row">2</th>
+                    <!-- table data - td - cells -->
+                    <td>Eiffel Tower is taller in the summer</td>
+                    <td aria-label="Reaction: that makes sense due to heat expansion.">interesting</td>
+                </tr>
+
+                <tr>
+                    <!-- optionally include th in data to provide more context to screen reader -->
+                    <th scope="row">3</th>
+                    <!-- table data - td - cells -->
+                    <td>the first pc virus was created in the 1980's</td>
+                    <td aria-label="Reaction: thats cool!">Cool!</td>
+                </tr>
+             </tbody>
+        <!-- close the table -->
+        </table>
+    </main>
+</body>
+</html>
