@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <header>
+        <h1>Beach Visitor Application</h1>
+    </header>
+
+    <main>
+        <!-- 
+            name and id should be the same
+            name: is typically used by the server (php code)
+            id: is typically used by the javascript and css
+            action: is the url that the form will be submitted to - can be same page or seperate page
+            method: get or post - get - the values are put in the querystring - only use this for testing
+                post - in combination with SSL (https) the form data will be securely transmitted to the page that is processing the data
+        -->
+        <form name="frmApp" id="frmApp" action="#" method="post">
+
+            <label for="txtFullName">Full Name:</label>
+            <input type="text" id="txtFullName" name="txtFullName" placeholder="Your Name" required>
+
+            <label for="emlAddress">Email:</label>
+            <input type="email" name="emlAddress" id="emlAddress" placeholder="yourname@domain.com" required>
+        </form>
+    </main>
+</body>
+</html>

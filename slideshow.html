@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Slideshow</title>
+    <!-- TODO: move these styles to a seperate css file -->
+     <style>
+        /* good way to set up universal styles for the page */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* custom class for the slideshow - parent section; set max width to 800px and center slideshow */
+        .slideshow{
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* custom class for the slides - child sections; we will overlap the positioning so the slides are next to each other; initially, the slides will be hidden with opacity set to 0; add in the transition effect */
+        .slide{
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* styles for the images in our slideshow - set up the selector this way so as not to affect other inages on the page */
+        .slide img{
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        /* keyframe animation to loop through the images giving a slideshow effect */
+        @keyframes fade{
+            /* 0% is the start of the animation cycle
+            33.33% - the slide will be visible for 1/3 of the cycle */
+            0%, 33.33%{
+                opacity: 1;
+            }
+            /* 40% - the slide starts fade out
+               100% - the slide goes back invisible with opacity of 0 */
+            40%, 100%{
+                opacity: 0;
+            }
+        }
+
+        /* this style will just apply to first image 
+        use the keyframes fade animation defined above
+        this slideshow will loop every 15 seconds forever 
+        this image displays first - thats why it is set to 0 seconds */
+        .slide:nth-child(1){
+            animation: fade 15s infinite 0s;
+        }
+        /* this style will just apply to second image 
+        use the keyframes fade animation defined above
+        this slideshow will loop every 15 seconds forever 
+        this image displays first - thats why it is set to 5 seconds */
+        .slide:nth-child(2){
+            animation: fade 15s infinite 5s;
+        }
+        /* this style will just apply to third image 
+        use the keyframes fade animation defined above
+        this slideshow will loop every 15 seconds forever 
+        this image displays first - thats why it is set to 10 seconds */
+        .slide:nth-child(3){
+            animation: fade 15s infinite 10s;
+        }
+     </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Slideshow</h1>
+    </header>
+    <main>
+        <div class="slideshow">
+            <div class="slide"><img src="./memes/img1.jpg" alt="meme 1"></div>
+            <div class="slide"><img src="./memes/img2.jpg" alt="meme 2"></div>
+            <div class="slide"><img src="./memes/img3.jpg" alt="meme 3"></div>
+        </div>
+    </main>
+</body>
+</html>
