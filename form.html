@@ -4,6 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Example</title>
+    <!-- TODO: move css styles to external -->
+     <style>
+        body{
+            background-image: url('images/beach.jpg');
+            background-position: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* form styles */
+        form{
+            background-color: rgb(178, 237, 252);
+            max-width: 400px;
+            /* add 20px margin top and bottom; left and right will have evenly spaced margins, as determined by the browser */
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea{
+            width:50%;
+            padding: 10px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            background-color: rgb(244, 244, 244);
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"], input[type="reset"]{
+        width: 25%;
+        padding: 20px;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-weight: bold;
+        }
+
+        /* if you want to be more specific
+        input[type="text"]{
+
+        }
+        */
+     </style>
 </head>
 <body>
     <header>
@@ -26,6 +77,45 @@
 
             <label for="emlAddress">Email:</label>
             <input type="email" name="emlAddress" id="emlAddress" placeholder="yourname@domain.com" required>
+
+            <!-- password label -->
+             <label for="pwUser">Password:</label>
+             <input type="password" name="pwUser" id="pwUser" required>
+
+            <!-- number input -->
+            <label for="numFav">Favorite Number:</label>
+            <input type="number" name="numFav" id="numFav">
+
+            <!-- date picker -->
+            <label for="dtTravel">Travel Date:</label>
+            <input type="date" name="dtTravel" id="dtTravel">
+
+            <!-- time picker -->
+             <label for="tmTravel">Arrival Time:</label>
+             <input type="time" name="tmTravel" id="tmTravel">
+
+             <!-- color picker -->
+              <label for="clFav">Favorite Color:</label>
+              <input type="color" name="clFav" id="clFav">
+
+              <!-- range picker -->
+               <label for="rngInterest">How interested are you in this trip? (left: not interested, right: most interested)</label>
+               <input type="range" name="rngInterest" id="rngInterest" min="0" max="10" step="1">
+
+               <!-- teletphone input -->
+                <label for="telUser">Phone Number:</label>
+                <input type="tel" name="telUser" id="telUser" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"> 
+
+                <!-- url input -->
+                 <label for="urlUserWebsite">Website:</label>
+                 <input type="url" name="urlUserWebsite" id="urlUserWebsite" placeholder="http://www.yourwebsite.com">
+
+                 <!-- Textarea - multiple rows of information, such as comments box -->
+                  <label for="txtaReason">Why do you want to visit our beach?</label>
+                  <textarea name="txtaReason" id="txtaReason" rows="5" placeholder="Enter your reason here"></textarea>
+
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Clear Form">
         </form>
     </main>
 </body>
