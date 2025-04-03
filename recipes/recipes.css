@@ -13,3 +13,84 @@ header{
     text-align: center;
     color:whitesmoke;
 }
+
+/* this will make any images contained in section tags 50% width */
+section img{
+    width: 75%;
+}
+
+/* this is the parent around our columns */
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* each column in the flex display */
+.column{
+    /* this means our columns will fill in the available space */
+    flex: 1;
+    background-color: tan;
+    border: 1px solid maroon;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* this style will only be added if theres a column class next to a column class */
+.column + .column{
+    margin-left: 30px;
+}
+
+/* make columns look better on smaller screen - stack them */
+@media(max-width: 700px){
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column + .column{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    section img{
+        width: 90%;
+    }
+}
+
+/* menu styles */
+nav ul{
+    /* get rid of the bullets */
+    list-style-type: none;
+
+    /* center text */
+    text-align: center;
+
+    /* display items horizontally */
+    overflow: hidden;
+}
+
+nav ul li{
+    /* gives items properties of both inline and block, so they will be next to each other on the row, but also height can be set */
+    display: inline-block;
+}
+
+/* style the links to our pages - this will only apply to anchor tags that are in our list, in a nav section */
+nav ul li a{
+    color:whitesmoke;
+    background-color: hsla(0, 100%, 25%, 0.9);
+    text-align: center;
+    /* 14px top/bottom 16px left/right */
+    padding: 14px 16px;
+    /* turn off the link underlining */
+    text-decoration: none;
+    /* will support padding and height, etc. */
+    display:block;
+
+}
+
+/* change how the menu items look when the mouse hovers over them */
+nav ul li a:hover{
+    /* color:rgb(203, 4, 4); */
+    background-color: rgba(203, 4, 4, 0.9);
+}
