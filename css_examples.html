@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Examples</title>
+</head>
+<body>
+    <header>CSS Examples</header>
+    
+    <main>
+        <style>
+            .triangle-image{
+                width: 200px;
+                height: 200px;
+                background-image: url('./images/color.jpg');
+                clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            }
+        </style>
+
+        <h2>Clipped Image</h2>
+        <div class="triangle-image"></div>
+        <!-- end triangle -->
+
+        <!-- Start filtered image -->
+        <style>
+            .filtered-image{
+                width: 200px;
+                height: 200px;
+                background-image: url('./images/color.jpg');
+                filter: grayscale(50%) blur(10%);
+            }
+
+        </style>
+        <h2>Filtered Image</h2>
+        <div class="filtered-image"></div>
+        <!-- end filtered image -->
+
+        <!-- start vertical text -->
+         <style>
+            .verticle-text{
+                writing-mode:vertical-rl;
+            }
+         </style>
+        <h2>Vertical Text</h2>
+        <div class="verticle-text">This is vertical text</div>
+        <!-- end vertical text -->
+        <style>
+            .neon-text{
+                color: white;
+                text-shadow:
+                    /* horizontal offset, verticle offset, blur radius, color */
+                    0 0 5px white,
+                    0 0 10px #ff00ff,
+                    0 0 20px #ff00ff,
+                    0 0 30px #ff00ff,
+                    0 0 40px #ff00ff,
+                    0 0 50px #ff00ff,
+                    0 0 60px #ff00ff;
+
+            }
+        </style>
+        <!-- start neon glow -->
+         <h2>Neon Glow</h2>
+         <div class="neon-text">This is neon glow text</div>
+         <!-- end neon glow -->
+
+         <!-- start scroll container -->
+        <style>
+            .scroll-container{
+                height: 100px;
+                overflow-y: scroll;
+                overscroll-behavior: contain;
+                border: 1px solid black;
+            }
+        </style>
+         <h2>Scroll Container</h2>
+         <div class="scroll-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+         <!-- end scroll container -->
+    </main>
+</body>
+</html>
