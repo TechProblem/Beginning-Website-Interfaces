@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w13 javascript example</title>
+    <style>
+        button{
+        background-color: #5ef490;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Javascript background color changing example</h1>
+    </header>
+
+    <main>
+        <h2>click the button to change the background color</h2>
+        <!-- div to hold the randomly generated color - this div starts out empty
+         the text will set using javascript -->
+        <div id="divColor"></div>
+        <button id="btnChangeColor" onclick="getRandomColor();">change color</button>
+    </main>
+
+    <!-- the script section allows me to write javascript code on my html page -->
+    <script>
+        //this is a javascript comment
+        //javascript syntax rules are very different from html
+
+        // a function is an organized chunck of code that you can call when you run it
+        // use the function keyword and give it a descriptive name - usually some kind of action; () can accept a value if needed; {} code for this function must go in between
+        function getRandomColor(){
+            // these are all the characters that can go into making a HEX color
+            var hexColorOptions = "0123456789ABCDEF"; 
+            // this will hold our random color
+            var randomColor = "#";
+
+            // loop 6 times to grab 6 random characters from the hexColorOptions variable
+            for (var i = 0; i < 6; i++){
+                // will give us a random number between 0 and 15
+                // grab the corresponding character from our hexColorOptions variable
+                randomColor += hexColorOptions[Math.floor(Math.random() * 16)];
+            }
+
+            // at this point our random color should have a value like #5B4A61
+            // use that random color to change the body background color
+            document.body.style.backgroundColor = randomColor;
+
+            //show the random color on the page
+            document.getElementById("divColor").innerText = randomColor;
+        }
+    </script>
+</body>
+</html>

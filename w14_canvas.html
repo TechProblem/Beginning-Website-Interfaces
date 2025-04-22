@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+    <style>
+        #canvasMain {
+            width: 400px;
+            height: 200px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Canvas Example</h1>
+    </header>
+    <main>
+        <canvas id="canvasMain"></canvas>
+    </main>
+
+    <!-- Javascript code to add stuff to the canvas -->
+     <script>
+        // set up a nickname/shortcut to the HTML canvas element
+        var canvas =document.getElementById("canvasMain");
+        //this variable will allow us to add stuff to the canvas
+        var context = canvas.getContext("2d");
+
+        // add some text
+        context.font = "20px Arial";
+        context.fillText("Hello World!", 25, 25);
+
+        // draw line
+        context.moveTo(50, 50); // x and y cords for where the line will start
+        context.lineTo(200, 100); // x and y cords for where the line will end
+        context.stroke(); // this actually draws the line
+
+        // draw a circle
+        context.beginPath();
+        context.arc(200, 100, 50, 0, Math.PI * 2); // x and y cords, radius, starting angle, ending angle
+        context.stroke(); // this actually draws the circle
+     </script>
+</body>
+</html>
